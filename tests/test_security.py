@@ -11,8 +11,7 @@ import bcrypt
 import jwt
 import pytest
 
-from main import (create_jwt_token, hash_password, verify_jwt_token,
-                  verify_password)
+from main import create_jwt_token, hash_password, verify_jwt_token, verify_password
 
 
 class TestPasswordSecurity:
