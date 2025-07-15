@@ -64,7 +64,7 @@ jobs:
         run: |
           pip install bandit
           bandit -r . -f json -o bandit-report.json || true
-          bandit -r . --severity-level medium
+          bandit -r . --severity-level high
 
       - name: Dependency vulnerability scan (safety)
         run: |

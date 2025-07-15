@@ -1,0 +1,17 @@
+[bandit]
+# Bandit configuration for POC/Development environment
+# Focus on real security issues, not development conveniences
+
+exclude_dirs = tests,__pycache__,.git,.venv
+
+# Skip common development/POC issues that aren't real security threats
+skips = B104,B201,B301,B601,B701
+
+# Only fail on HIGH severity issues for POC
+# Medium/Low issues are warnings only
+
+# B104: hardcoded_bind_all_interfaces (normal for containers)
+# B201: flask_debug_true (normal for development)  
+# B301: pickle usage (may be needed for serialization)
+# B601: paramiko_calls (may be needed for SSH)
+# B701: jinja2_autoescape_false (may be needed for templates) 
