@@ -1,0 +1,23 @@
+[project]
+name = "auth-service"
+version = "0.1.0"
+description = "Company1 Authentication Service"
+requires-python = ">=3.11"
+dependencies = []
+
+# =============================================================================
+# Code Quality Configuration (Black + isort compatibility)
+# =============================================================================
+
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
+known_first_party = ["main"]
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = ["E203", "W503"] 
