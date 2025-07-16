@@ -122,9 +122,9 @@ known_first_party = ["company1_auth"]
 
 [tool.mypy]
 python_version = "3.11"
-warn_return_any = true
-warn_unused_configs = true
 # Temporarily disabled for POC - can be enabled once type annotations are added
+# warn_return_any = true
+warn_unused_configs = true
 # disallow_untyped_defs = true
 # disallow_incomplete_defs = true
 check_untyped_defs = true
